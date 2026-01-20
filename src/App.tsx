@@ -1,4 +1,4 @@
-// day3  2.환경변수 설정
+// day3 4.git 브랜치 전략 (삭제 기능 추가하여 커밋)
 
 import { useState, useEffect } from "react";
 import MemoForm from "@/components/MemoForm";
@@ -64,6 +64,24 @@ function App() {
         setMemos(memos.filter((memo) => memo.id !== id));
     };
 
+    /**
+     * 전체 메모 삭제 함수
+     */
+    const handleClearAll = () => {
+        if (memos.length === 0) {
+            alert("삭제할 메모가 없습니다.");
+            return;
+        }
+
+        if (
+            window.confirm(
+                `정말 ${memos.length}개의 메모를 모두 삭제하시겠습니까?`,
+            )
+        ) {
+            setMemos([]);
+        }
+    };
+
     return (
         <div className="app">
             <h1 className="app-title">
@@ -71,6 +89,13 @@ function App() {
             </h1>
 
             <MemoForm onAddMemo={handleAddMemo} />
+
+            {/* 전체 삭제 버튼 추가 */}
+            {memos.length > 0 && (
+                <button className="clear-all-button" onClick={handleClearAll}>
+                    🗑️ 전체 삭제
+                </button>
+            )}
 
             <MemoList
                 memos={memos}

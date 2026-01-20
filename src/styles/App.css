@@ -184,3 +184,24 @@
     font-size: 0.875rem;
     margin-top: 20px;
 }
+
+/* ============================================
+   전체 삭제 버튼 스타일
+   ============================================ */
+.clear-all-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #ff6b6b;
+    background-color: #fff5f5;
+    border: 1px solid #ffc9c9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clear-all-button:hover {
+    background-color: #ffe3e3;
+    border-color: #ffa8a8;
+}
