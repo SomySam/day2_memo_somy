@@ -1,0 +1,50 @@
+# 로컬 환경 변수 (민감한 정보 포함)
+.env.local
+.env.*.local
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 의존성
+node_modules/
+
+# 빌드 출력물
+/build
+/build-ssr
+dist
+dist-ssr
+
+
+# 에디터 설정
+.vscode
+.idea
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# copy 단어가 들어간 파일들
+*copy*
+*Copy*
+*COPY*
+
+
+
